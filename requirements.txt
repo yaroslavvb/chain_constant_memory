@@ -1,0 +1,4 @@
+tf-nightly
+pytest
+networkx
+toposort

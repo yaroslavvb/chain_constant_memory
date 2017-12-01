@@ -1,2 +1,6 @@
-# chain_constant_memory
-Example of backprop which uses constant memory
+To test
+
+```
+pip install -r requirement.txt
+pytest
+```
