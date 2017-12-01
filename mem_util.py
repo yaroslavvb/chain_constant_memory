@@ -46,7 +46,7 @@
 #   }
 #
 # Additionally one could use LOG_MEMORY messages to get memory allocation info
-# See multiple_memory_obtain_test.py for details on using these additional
+# See multiple_memory_obtain_example.py for details on using these additional
 # methods
 
 def peak_memory(run_metadata):
