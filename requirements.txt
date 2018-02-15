@@ -1,4 +1,4 @@
-tensorflow
+tf-nightly
 pytest
 networkx
 toposort
