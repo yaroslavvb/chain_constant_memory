@@ -1,9 +1,17 @@
-sudo: required
-dist: trusty
-language: python
-python:
-- '3.5'
+language: generic
+sudo: true
+cache:
+  directories:
+  - $HOME/.cache/jetware
 install:
-- pip install -r requirements.txt
+- wget -c -O $HOME/.cache/jetware/python36_glibc223_gcc54.tgz https://jetware.io/appliances/kvechera/python36_glibc223_gcc54-180219/download/installer:tgz
+- sudo mkdir /jet
+- sudo chown $USER /jet
+- tar xpzf $HOME/.cache/jetware/python36_glibc223_gcc54.tgz -C /jet
+- /jet/own/bin/run /jet/own/bin/fasten
+- /jet/enter pip install -r requirements.txt
 script:
-- pytest
+- |
+  /jet/enter <<_EOF_
+  pytest
+  _EOF_
